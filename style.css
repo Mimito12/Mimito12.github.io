@@ -1,22 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    background-color: #f5f5f5;
+    background: linear-gradient(to right, #FAD0C4, #FFD1FF);
     margin: 0;
     padding: 0;
+    color: #5D3754;
 }
 
 .container {
     margin-top: 50px;
+    padding: 20px;
 }
 
 h1 {
-    color: #333;
+    font-size: 36px;
+    color: #5D3754;
+    animation: fadeIn 2s ease-in-out;
 }
 
 p {
     font-size: 18px;
-    color: #666;
+    color: #7A4E71;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: slideUp 1.5s ease-in-out;
 }
 
 img {
@@ -24,18 +31,32 @@ img {
     max-width: 400px;
     border-radius: 10px;
     margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
     display: inline-block;
     text-decoration: none;
-    background-color: #ff4081;
+    background-color: #F76C6C;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 30px;
     font-size: 18px;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #e91e63;
+    background-color: #FF4D4D;
+    transform: scale(1.05);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
